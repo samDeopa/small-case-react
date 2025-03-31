@@ -10,7 +10,7 @@ const Header = () => {
           <a className=" p-2 text-gray-400">Watchlist </a>
           <img
             className="w-10 h-10 rounded-full"
-            src="https://avatar.iran.liara.run/public/boy"
+            src="https://xsgames.co/randomusers/avatar.php?g=pixel"
             alt="Rounded avatar"
           />
         </div>
