@@ -71,11 +71,11 @@ const DiscoverSection = () => {
     return stocksCopy;
   }, [stocks, sortFilter]);
 
-  // Current time stored once for filtering
-  const now = new Date();
-
   // Filtering logic
   const filteredList = useMemo(() => {
+    // Moved 'now' inside the callback so it doesn't become a dependency
+    const now = new Date();
+
     return sortedList.filter((stock) => {
       let flag = true;
 
@@ -123,7 +123,7 @@ const DiscoverSection = () => {
       }
       return flag;
     });
-  }, [sortedList, filters, now]);
+  }, [sortedList, filters]);
 
   return (
     <div className="w-[1120px]">
