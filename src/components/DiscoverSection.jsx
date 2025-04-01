@@ -33,7 +33,6 @@ const DiscoverSection = () => {
 
   // Separate sorting function
   const sortedList = useMemo(() => {
-    // Clone the stocks array to avoid in-place mutation
     const stocksCopy = [...stocks];
     stocksCopy.sort((a, b) => {
       if (sortFilter === "Popularity") {
@@ -101,7 +100,6 @@ const DiscoverSection = () => {
 
       // Volatility Filter
       if (filters.volatility.size) {
-        // Assume riskLabel is something like "low risk" etc.
         const risk = stock.stats.ratios.riskLabel.split(" ")[0];
         flag = flag && filters.volatility.has(risk);
       }
